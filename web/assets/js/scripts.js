@@ -112,8 +112,9 @@ jQuery(document).ready(function() {
         $('.f1 #addr').show();
 		$(".f1 #addr #f1-house-no").val("Building NO:12B");
 		$(".f1 #addr #f1-street-name").val("Raheja MindSpace");
+		$(".f1 #addr #f1-city").val("Hyderabad")
 		$(".f1 #addr #f1-state").val("Telangana");
-		$(".f1 #addr #f1-pin").val(12333453454);
+		$(".f1 #addr #f1-pin").val(500081);
     });
 
     $('.f1 .btn-next').on('click', function() {
@@ -172,10 +173,11 @@ jQuery(document).ready(function() {
     
     // submit
     $('.f1').on('submit', function(e) {
-    	
+    	var i=0;
     	// fields validation
     	$(this).find('input[type="text"], input[type="password"], textarea').each(function() {
     		if( $(this).val() == "" ) {
+    			i=1;
     			e.preventDefault();
     			$(this).addClass('input-error');
     		}
@@ -183,6 +185,14 @@ jQuery(document).ready(function() {
     			$(this).removeClass('input-error');
     		}
     	});
+    	if(i==1){
+                $.post("addDetails.jsp",{
+
+
+                },function (data) {
+                    console.log("i am back to scripts")
+                });
+		}
     	// fields validation
     	
     });
