@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+
+   <class name="Entities.DateTable" table="DateTable">
+      <meta attribute="class-description">
+         This class contains the address detail.
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="dt" column="DATE" type="date"/>
+      <property name="slotcnt" column="COUNT" type="int"/>
+   </class>
+
+   <class name="Entities.SparePartsClass" table="spareparts">
+      <meta attribute="class-description">
+         This class contains the spareparts detail.
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="sparepartName" column="sparepart_name" type="string"/>
+      <property name="cost" column="cost" type="long"/>
+   </class>
+
+
+   <class name="Entities.Customer" table="CUSTOMER">
+      <meta attribute="class-description">
+         This class contains the employee detail.
+      </meta>
+      <id name="regNo" type="string" column="REGISTRATIONNUMBER">
+         <generator class="assigned"/>
+      </id>
+      <property name="name" column="NAME" type="string"/>
+      <property name="bookingDate" column="BOOKINGDATE" type="date"/>
+      <property name="mobileNo" column="MOBILE" type="long"/>
+      <property name="email" column="EMAILID" type="string"/>
+      <many-to-one name="address" column="CUSTADDRESS" unique="true"
+                   class="Entities.Address" not-null="true"/>
+   </class>
+
+
+
+   <class name="Entities.Address" table="CUSTADDRESS">
+      <meta attribute="class-description">
+         This class contains the address detail.
+      </meta>
+      <id name="regNo" type="string" column="REGISTRATIONNUMBER" >
+         <!-- generator class="native"/ -->
+         <generator class="assigned"/>
+      </id>
+      <property name="hno" column="HOUSENO" type="string"  not-null="true"/>
+      <property name="streetName" column="STREETNAME" type="string"/>
+      <property name="city" column="CITY" type="string"/>
+      <property name="state" column="STATE" type="string"/>
+      <property name="pinCode" column="PINCODE" type="int"/>
+   </class>
+
+
+</hibernate-mapping>
