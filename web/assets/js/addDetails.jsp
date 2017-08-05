@@ -2,7 +2,8 @@
 <%@ page import="Entities.HibernateClass" %>
 <%@ page import="Entities.Address" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %><%--
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="Dao.CustomerDAOImpl" %><%--
   Created by IntelliJ IDEA.
   User: bholar
   Date: 8/4/2017
@@ -17,28 +18,28 @@
 <body>
 <%System.out.println("Hello in adddetails");%>
 <%
-    String hno = request.getParameter("f1-house-no");
-    String street = request.getParameter("f1-street-name");
-    String city = request.getParameter("f1-city");
-    String state = request.getParameter("f1-state");
-    int pin = Integer.parseInt(request.getParameter("f1-pin"));
+    String hno = request.getParameter("f1houseno");
+    String street = request.getParameter("f1streetname");
+    String city = request.getParameter("f1city");
+    String state = request.getParameter("f1state");
+    int pin = Integer.parseInt(request.getParameter("f1pin"));
     System.out.println("HOUSE NO  :  "+hno);
     System.out.println("Street  :  "+street);
     System.out.println("City  :  "+city);
     System.out.println("State  :  "+state);
     System.out.println("PIN  :  "+pin);
     System.out.println("Before Hibernate in AddDetails");
-    HibernateClass HC = new HibernateClass();
+    CustomerDAOImpl HC = new CustomerDAOImpl();
     System.out.println("After Hibernate in AddDetails");
-    Address add = HC.addAddress(hno,street,city,state,pin);
-
+    Address add =new Address(hno,street,city,state,pin);
+HC.addAddress(add);
     //FETCH CUSTOMER DETAILS
 
-    String vehId = request.getParameter("f1-first-name");
-    String name = request.getParameter("f1-last-name");
-    long mobile = Integer.parseInt(request.getParameter("f1-about-yourself"));
-    String email = request.getParameter("f1-email1");
-    Date date = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("f1-date"));
+    String vehId = request.getParameter("f1firstname");
+    String name = request.getParameter("f1lastname");
+    long mobile = Long.parseLong(request.getParameter("f1aboutyourself"));
+    String email = request.getParameter("f1email1");
+    Date date = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("f1date"));
 
     boolean validCustomer = HC.addCustomer(vehId,name,date,mobile,email,add);
 

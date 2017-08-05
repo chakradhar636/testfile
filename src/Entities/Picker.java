@@ -1,39 +1,27 @@
 package Entities;
 
+import java.math.BigInteger;
 /**
- * Created by vankayab on 8/3/2017.
+ * Created by bholar on 8/4/2017.
  */
 public class Picker {
-    String id;
-    boolean engaged;
-    String name;
-    String mobileno;
+    private int id;
+    private String name;
+    private long mobile;
 
     public Picker() {
     }
 
-    public Picker(String id, String name, String mobileno) {
-
-        this.id = id;
+    public Picker(String name, long mobile) {
         this.name = name;
-        this.mobileno = mobileno;
+        this.mobile = mobile;
     }
 
-
-    public boolean isEngaged() {
-        return engaged;
-    }
-
-    public void setEngaged(boolean engaged) {
-        this.engaged = engaged;
-    }
-
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -45,11 +33,11 @@ public class Picker {
         this.name = name;
     }
 
-    public String getMobileno() {
-        return mobileno;
+    public long getMobile() {
+        return mobile;
     }
 
-    public void setMobileno(String mobileno) {
-        this.mobileno = mobileno;
+    public void setMobile(long mobile) {
+        this.mobile = mobile;
     }
 }

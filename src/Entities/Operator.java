@@ -4,6 +4,16 @@ package Entities;
  * Created by vankayab on 8/2/2017.
  */
 public class Operator {
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     String Username;
     String Password;
 

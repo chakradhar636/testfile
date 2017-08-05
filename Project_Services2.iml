@@ -25,9 +25,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.7924" level="application_server_libraries" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 7.0.7924" level="application_server_libraries" />
     <orderEntry type="library" name="Hibernate 5.2.3-5.2.3" level="project" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/antlr-2.7.7.jar!/" />
@@ -36,7 +36,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/classmate-1.3.0.jar!/" />
@@ -45,7 +45,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/dom4j-1.6.1.jar!/" />
@@ -54,7 +54,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/hibernate-commons-annotations-5.0.1.Final.jar!/" />
@@ -63,7 +63,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/hibernate-core-5.2.10.Final.jar!/" />
@@ -72,7 +72,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
@@ -81,7 +81,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/jandex-2.0.3.Final.jar!/" />
@@ -90,7 +90,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/javassist-3.20.0-GA.jar!/" />
@@ -99,7 +99,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/jboss-logging-3.3.0.Final.jar!/" />
@@ -108,7 +108,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../Project_Services1/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar!/" />
@@ -117,10 +117,50 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/JDBC jar/com.mysql.jdbc_5.1.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/aopalliance-repackaged-2.5.0-b32.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/hk2-api-2.5.0-b32.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/hk2-locator-2.5.0-b32.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/hk2-utils-2.5.0-b32.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/javax.inject-2.5.0-b32.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-client.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-common.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-container-servlet-core.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-container-servlet.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-guava-2.25.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-media-jaxb.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/jersey-server.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/persistence-api-1.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../RESTFirstExample/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar!/OSGI-OPT/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/com.mysql.jdbc_5.1.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

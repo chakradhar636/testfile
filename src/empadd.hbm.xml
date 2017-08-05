@@ -4,8 +4,17 @@
   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping >
-
+<hibernate-mapping>
+   <class name="Entities.Operator" table="Operator">
+      <meta attribute="class-description">
+         This class contains the operator detail.
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="Username" column="username" type="string"/>
+      <property name="Password" column="password" type="string"/>
+       </class>
    <class name="Entities.DateTable" table="DateTable">
       <meta attribute="class-description">
          This class contains the Date detail.
@@ -16,30 +25,14 @@
       <property name="dt" column="DATE" type="date"/>
       <property name="slotcnt" column="COUNT" type="int"/>
    </class>
+<class name="Entities.SparePartsClass" table="Spareparts">
+   <id name="id" type="int" column="id">
+      <generator class="native"/>
+   </id>
+   <property name="sparepartName" type="string" column="sparepartname"/>
+   <property name="cost" type="long" column="cost"/>
 
-   <class name="Entities.SparePartsClass" table="spareparts">
-      <meta attribute="class-description">
-         This class contains the spareparts detail.
-      </meta>
-      <id name="id" type="int" column="id">
-         <generator class="native"/>
-      </id>
-      <property name="sparepartName" column="sparepart_name" type="string"/>
-      <property name="cost" column="cost" type="long"/>
-   </class>
-
-   <class name="Entities.DriverClass" table="Driver">
-      <meta attribute="class-description">
-         This class contains the Driver details.
-      </meta>
-      <id name="id" type="int" column="id">
-         <generator class="native"/>
-      </id>
-      <property name="name" column="Name" type="string"/>
-      <property name="mobile" column="Mobile" type="long"/>
-   </class>
-
-
+</class>
    <class name="Entities.Customer" table="CUSTOMER">
       <meta attribute="class-description">
          This class contains the Customer detail.
@@ -54,7 +47,16 @@
       <many-to-one name="address" column="CUSTADDRESS" unique="true"
                    class="Entities.Address" not-null="true"/>
    </class>
+<class name="Entities.ServiceOrder" table="SERVICEORDER">
+   <id name="regno" type="string" column="REGISTRATIONNUMBER"></id>
+   <property name="opcode" type="string" column="OPCODE"/>
 
+</class>
+   <class name="Entities.Picker" table="PICKER">
+      <id name="id" type="int" column="ID"></id>
+      <property name="name" type="string" column="NAME"></property>
+      <property name="mobile" type="long" column="MOBILE"></property>
+   </class>
 
 
    <class name="Entities.Address" table="CUSTADDRESS">
@@ -71,6 +73,5 @@
       <property name="state" column="STATE" type="string"/>
       <property name="pinCode" column="PINCODE" type="int"/>
    </class>
-
 
 </hibernate-mapping>
