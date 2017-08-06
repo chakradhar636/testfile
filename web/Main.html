@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+<input type="button" onclick="invoke()" value="Click Here"/>
+<input type="text" name="num" id="id12">
+<p>Press to retrieve
+<p id="tst"></p>
+
+
+<script>
+    function invoke() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            /*
+             State  Description
+             0      The request is not initialized
+             1      The request has been set up
+             2      The request has been sent
+             3      The request is in process
+             4      The request is complete
+             */
+            if (this.readyState == 4 && this.status == 200) {
+                var str=this.responseText.split("<body>");
+                Console.log(str);
+                str.split()
+                document.getElementById("tst").innerHTML = this.responseText;
+            }
+        };
+        //xhttp.open("GET", "check.jsp?num="+document.getElementById("id12").value, true/*indicates true for async*/);
+        var some_id= document.getElementById("id12").value;
+        console.log("idddd:"+some_id);
+        xhttp.open("GET", "check.jsp?num="+some_id, true);  /*indicates true for async*/
+        xhttp.send();
+
+        console.log("Ajax request sent...")
+    }
+</script>
+</body>
+</html>

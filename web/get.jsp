@@ -25,7 +25,7 @@
     System.out.print("in jsp");
     boolean slot_available = a.date(date);
     System.out.print("slot Result:"+slot_available);
-    out.print(slot_available);
+    out.print(""+slot_available);
 %>
 </body>
 </html>
